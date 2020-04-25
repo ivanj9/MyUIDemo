@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:MyUIDemo.CustomElements"
+             mc:Ignorable="d"
+             x:Class="MyUIDemo.MainPage">
+
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <custom:GradientButton Text="Horizontal"
+                                           TextColor="White"
+                                           StartColor="#F34040"
+                                           EndColor="#1A4C7F"
+                                           CornerRadius="5"
+                                           GradientOrientation="Horizontal"
+                                           WidthRequest="150"/>
+
+        <custom:GradientButton Text="Vertical" Clicked="GradientButton_Clicked"
+                                           TextColor="White"
+                                           StartColor="#000080"
+                                           EndColor="#800080"
+                                           CornerRadius="5"
+                                           GradientOrientation="Vertical"
+                                           WidthRequest="150"/>
+        <Button Text="Normal" BackgroundColor="Blue" TextColor="White"/>
+    </StackLayout>
+
+</ContentPage>
